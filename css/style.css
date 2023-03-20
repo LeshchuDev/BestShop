@@ -258,11 +258,13 @@ h2 {
 .benefits__text p {
     padding-bottom: 30px;
 }
-.benefits__text {
+.benefits__text,
+.benefits__solo1 {
     position: relative;
 }
 
-.benefits__text:after {
+.benefits__text:after,
+.benefits__solo1::after {
     position: absolute;
     content: "";
     height: 0;
@@ -271,8 +273,16 @@ h2 {
     margin-top: 20px;
 }
 
+.benefits__solo1::after {
+    bottom: 70px;
+    border: 2px solid var(--color-green);
+}
 .benefits__text--first {
     padding-right: 170px;
+}
+
+.benefits__text__second {
+    margin-left: 192px;
 }
 .benefits__text__second:after {
     border: 2px solid var(--color-primary);
@@ -293,6 +303,25 @@ h2 {
 .phone {
     width: 426px;
     height: auto;
+    z-index: 1;
+    position: relative;
+    margin-left: 34px;
+}
+
+.benefits__img__bgd2 {
+    position: relative;
+}
+.benefits__img__bgd2:after {
+    position: absolute;
+    content: "";
+    height: 320px;
+    width: 320px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    top:0;
+    left: 0;
+    z-index: 0;
+    margin-left: 34px;
 }
 
 .trumpet {
@@ -319,11 +348,15 @@ h2 {
     flex-direction: column;
     justify-content: center;
     row-gap: 40px;
+    padding-left: 36px;
+    padding-right: 34px;
+    border-radius: 5px;
 }
 .benefits__solo2 {
     text-align: center;
     padding: 98px 82px 64px 62px;
     background-color: var(--color-green);
+    border-radius: 5px;
 }
 
 .benefits__duble {
@@ -332,4 +365,28 @@ h2 {
     background-color: var(--color-light-grey);
     border: none;
     padding: 0;
+}
+
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing__boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pricing__box {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+
 }
