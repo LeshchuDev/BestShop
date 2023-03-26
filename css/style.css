@@ -17,6 +17,7 @@
     margin: 0 auto;
     text-decoration: none;
 }
+
 .header {
     width: 100hv;
     box-shadow: 0px 3px 6px #00000029;
@@ -373,11 +374,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-open-sans);
 }
 
 .pricing__boxes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
@@ -386,7 +388,232 @@ h2 {
     width: 370px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid var(--accent-color);
+    border-radius: 18px;
+    position: relative;
+}
 
+.pricing__box .btn {
+    position: absolute;
+    bottom: -24px;
+}
+
+.pricing--professional {
+    width: 400px;
+    margin: 0 40px;
+    --accent-color: var(--color-primary);
+    box-shadow: 5px 1px 27px var(--color-primary-shadow);
+}
+
+.pricing--basic {
+    --accent-color: var(--color-redish);
+}
+
+.pricing--basic .pricing--ammount {
+    color: var(--color-redish);
+}
+
+.pricing--basic .btn {
+    background-color: var(--color-redish);
+}
+.pricing--premium .pricing--ammount {
+    color: var(--color-green);
+
+}
+.pricing--premium {
+    --accent-color: var(--color-green);
+}
+.pricing--professional .pricing--ammount {
+    color: var(--color-primary);
+}
+
+.pricing--premium .btn{
+    background-color: var(--color-green);
+}
+.pricing__box .btn {
+    padding: 16px 57px;
+    margin-top: 55px;
+}
+.pricing--professional .pricing__item {
+    margin-top: 25px;
+}
+.pricing__item {
+    margin-top: 20px;
+}
+
+.pricing__item:last-of-type {
+    margin-bottom: 80px;
+}
+
+.pricing__item::before {
+    content:url(../assets/Ckechmark-1.svg);
+    height: 11px;
+    width: 11px;
+    margin-right: 10px;
+}
+
+.not_include::before {
+    content:url(../assets/Close.svg);
+    height: 11px;
+    width: 11px;
+    margin-right: 10px;
+}
+.pricing__items {
+    text-align: center;
+}
+    
+.pricing--title {
+    margin-top: 34px;
+    font-family: var(--font-raleway);
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.pricing--ammount1{
+    margin-bottom: 83px;
+}
+
+.pricing--ammount {
+    font-size: 46px;
+    font-weight: 300;
+    margin-top: 25px;
+}
+.pricing--limit {
+    margin-bottom: 51px;
+    margin-top: 25px;
+}
+
+.pricing--limit--pro {
+    margin-bottom: 61px;
+    margin-top: 25px;
+}
+.pricing--main--title {
+    font-family: var(--font-raleway);
+    font-size: 36px;
+}
+
+.contact {
+    padding: 80px 100px 100px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-open-sans);
+}
+.contact h2 {
+    font-size: 49px;
+    font-family: var(--font-raleway);
+}
+.contact__questions,
+.contact__form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.contact__questions {
+    justify-content: flex-start;
+}
+
+.phone--number {
+    padding-left: 20px;
+}
+.contact__details a{
+    color: var(--color-grey);
+}
+.form__checkbox {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+.contact__btn {
+    padding: 20px 97px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.label__name {
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+#name,
+#email {
+    border: 1px solid var(--color-grey);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.label__check {
+    font-size: 12px;
+    color: var(--color-grey);
+    line-height: 17px;
+    margin-left: 20px;
+}
+
+#check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+    padding: 12px;
+
+}
+
+#check:checked {
+    background-image: url(../assets/Checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#check:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+}
+
+.footer {
+    box-shadow: 0px -5px 40px #00000029;
+    padding: 20px 0;
+}
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 6px;
+}
+
+.footer__logo {
+    font-size: 26px;
+}
+
+.footer span {
+    font-family: var(--font-open-sans);
+    font-size: 11px;
+    color: var(--color-grey);
+}
+
+.twitter--icon {
+    margin-right: 20px;
 }
