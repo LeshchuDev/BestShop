@@ -1,0 +1,91 @@
+@use "../settings/variables" as var;
+
+
+.stats {
+    margin-top: 100px;
+    text-align: center;
+
+    .stats__main__container {
+        margin: 0 auto;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .stats__content {
+        
+            width: 800px;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+
+            .stats__article {
+                width: 160px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 100px;
+
+                .circle {
+                    height: 63px;
+                    width: 63px;
+                    border-radius: 50%;
+                    position: relative;
+                    
+                }    
+
+                .first {
+                    background-color: var.$color-redish;
+
+                    .article__img1 {
+                        position: absolute;
+                        left: 30px;
+                        top: 5px
+                    }
+                }
+                
+                .second {
+                    background-color: var.$color-primary;
+
+                    .article__img2 {
+                        position: absolute;
+                        top: 12px;
+                        left: 15px
+                    }
+                }
+                
+                .third {
+                    background-color: var.$color-green;
+
+                    .article__img3 {
+                        position: absolute;
+                        left: 33px;
+                        top: 5px;
+                    }
+                }
+
+                span {
+                    font-family: var.$font-raleway;
+                    font-size: 20px;
+                    font-weight: 800;
+                    letter-spacing: 5.96px;
+                    line-height: 24px;
+                    color: var.$color-black;
+                    padding-top: 30px;
+                }
+                
+                p {
+                    font-family: var.$font-raleway;
+                    font-size: 17px;
+                    color: var.$color-grey;
+                    line-height: 20px;
+                    flex-grow: 1;
+                    margin-top: 30px;
+                    
+                }
+            }
+        } 
+    }    
+}
+

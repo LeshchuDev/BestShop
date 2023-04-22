@@ -1,0 +1,21 @@
+@use "../settings/variables" as var;
+
+
+.container {
+    margin: 0 auto;
+    width: 1352px;
+    
+}
+
+h1 {
+    font-family: var.$font-raleway;
+    font-size: 49px;
+    line-height: 57px;
+}
+
+h2 {
+    font-family: var.$font-raleway;
+    font-size: 36px;
+    line-height: 42px;
+    color: var.$color-black;
+}
