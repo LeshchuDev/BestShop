@@ -1,6 +1,11 @@
 @use "../settings/variables" as var;
 
-
+%logo-style {
+    font-family: var.$font-raleway;
+    font-weight: 300;
+    font-size: 32px;
+    color: #08a6e4;
+}
 
 
 %benefits-all {

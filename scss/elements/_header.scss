@@ -1,4 +1,5 @@
 @use "../settings/variables" as var;
+@use "../settings/placeholders";
 
 
 .header {
@@ -15,10 +16,7 @@
         height: 100%;
 
         .logo {
-            font-family: var.$font-raleway;
-            font-weight: 300;
-            font-size: 32px;
-            color: #08a6e4;
+            @extend %logo-style;
         }
 
         .nav__list {

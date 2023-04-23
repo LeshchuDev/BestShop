@@ -195,6 +195,13 @@ h2 {
   line-height: 42px;
 }
 
+.footer .footer__container .footer__logo, .header .header__container .logo {
+  color: #08a6e4;
+  font-family: Raleway, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
 .benefits .benefits__container .benefits__single, .benefits .benefits__container .benefits__duble {
   width: 100%;
   height: 370px;
@@ -401,13 +408,6 @@ h2 {
   display: flex;
 }
 
-.header .header__container .logo {
-  color: #08a6e4;
-  font-family: Raleway, sans-serif;
-  font-size: 32px;
-  font-weight: 300;
-}
-
 .header .header__container .nav__list {
   justify-content: space-between;
   align-items: center;
@@ -442,30 +442,30 @@ h2 {
   box-shadow: 0 -5px 40px #00000029;
 }
 
-.footer__container {
+.footer .footer__container {
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
 
-.footer__info {
+.footer .footer__container .footer__info {
   flex-direction: column;
   justify-content: space-around;
   row-gap: 6px;
   display: flex;
 }
 
-.footer__logo {
+.footer .footer__container .footer__logo {
   font-size: 26px;
 }
 
-.footer span {
+.footer .footer__container .footer span {
   color: #a5a5a5;
   font-family: Open Sans, sans-serif;
   font-size: 11px;
 }
 
-.twitter--icon {
+.footer .footer__container .twitter--icon {
   margin-right: 20px;
 }
 
