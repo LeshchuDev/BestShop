@@ -1,4 +1,6 @@
 @use "../settings/variables" as var;
+@use "../settings/placeholders";
+
 
 
 .hero {
@@ -24,14 +26,7 @@
             }
             
             .btn {
-                font-family: var.$font-open-sans;
-                font-size: 16px;
-                padding: 22px 157px;
-                background-color: var.$color-primary;
-                border-radius: 40px;
-                box-shadow: 5px 10px 14px #07ACE629;
-                color: var.$color-white;
-                margin-top: 38px;
+                @extend %buttons;
             }
             
         

@@ -1,4 +1,6 @@
 @use "../settings/variables" as var;
+@use "../settings/placeholders";
+
 
 
 .contact {
@@ -6,89 +8,94 @@
     display: flex;
     justify-content: center;
     font-family: var.$font-open-sans;
-}
-.contact h2 {
-    font-size: 49px;
-    font-family: var.$font-raleway;
-}
-.contact__questions,
-.contact__form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-}
 
-.contact__questions {
-    justify-content: flex-start;
-}
+    
+    .contact__questions {
+        @extend %contact-sets;
+        justify-content: flex-start;
 
-.phone--number {
-    padding-left: 20px;
-}
-.contact__details a{
-    color: var.$color-grey;
-}
-.form__checkbox {
-    display: flex;
-    align-items: flex-start;
-    column-gap: 10px;
-}
+        h2 {
+            font-size: 49px;
+            font-family: var.$font-raleway;
+        }
 
-.contact__btn {
-    padding: 20px 97px;
-    text-align: center;
-    align-self: flex-end;
-}
+        .contact__details {
+            a {
+            color: var.$color-grey;
+            }
+    
+            .phone--number {
+                padding-left: 20px;
+            }
+        }
+    }
+    .contact__form {
+        @extend %contact-sets;
 
-.label__name {
-    color: var.$color-primary;
-    font-size: 11px;
-    font-weight: 700;
-}
+        .label__name {
+            color: var.$color-primary;
+            font-size: 11px;
+            font-weight: 700;
+        }
+    
+        #name,
+        #email {
+            border: 1px solid var.$color-grey;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
 
-#name,
-#email {
-    border: 1px solid var.$color-grey;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
+        .form__checkbox {
+            display: flex;
+            align-items: flex-start;
+            column-gap: 10px;
+        
+    
+            .label__check {
+                font-size: 12px;
+                color: var.$color-grey;
+                line-height: 17px;
+                margin-left: 20px;
+            }
+        
+            #check {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 24px;
+                height: 24px;
+                border: 1px solid var.$color-grey;
+                border-radius: 4px;
+                outline: none;
+                position: relative;
+                padding: 12px;
 
-.label__check {
-    font-size: 12px;
-    color: var.$color-grey;
-    line-height: 17px;
-    margin-left: 20px;
-}
+                &:checked {
+                    background-image: url(../assets/Checkmark.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: auto;
+                }
+                &:after {
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    left: 50%;
+                    top:50%;
+                    transform: translate(-50%, -50%);
+                    border: 1px solid var.$color-grey;
+                    border-radius: 4px;
+                }
+            }
+        }
 
-#check {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    border: 1px solid var.$color-grey;
-    border-radius: 4px;
-    outline: none;
-    position: relative;
-    padding: 12px;
-
-}
-
-#check:checked {
-    background-image: url(../assets/Checkmark.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#check:after {
-    content: "";
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid var.$color-grey;
-    border-radius: 4px;
+        .contact__btn {
+            @extend %buttons;
+            padding: 20px 97px;
+            text-align: center;
+            align-self: flex-end;
+        }
+    }   
 }

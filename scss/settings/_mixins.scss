@@ -1,0 +1,9 @@
+@use "../settings/variables" as var;
+
+
+@mixin pricing-style($color) {
+    width: 400px;
+    margin: 0 40px;
+    border: 1px solid $color;
+    @content;
+}

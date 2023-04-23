@@ -1,6 +1,8 @@
 @use "../settings/variables" as var;
+@use "../settings/placeholders";
+@use "../settings/mixins";
 
-$accent-color: var.$color-primary;
+
 
 .pricing {
     margin: 100px auto;
@@ -17,45 +19,46 @@ $accent-color: var.$color-primary;
         margin-top: 50px;
 
         .pricing__box {
-            width: 370px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            border: 1px solid $accent-color;
-            border-radius: 18px;
-            position: relative;
+            
+            @extend %pricing-sets;
+
+            .btn {
+                @extend %buttons;
+                position: absolute;
+                bottom: -24px;
+                padding: 16px 57px;
+                margin-top: 55px;
+            }
         }
         
-        .pricing__box .btn {
-            position: absolute;
-            bottom: -24px;
-        }
+        
         
         .pricing--professional {
-            width: 400px;
-            margin: 0 40px;
-            $accent-color: var.$color-primary;
-            box-shadow: 5px 1px 27px var.$color-primary-shadow;
+            @include mixins.pricing-style(var.$color-primary){
+                box-shadow: 5px 1px 27px var.$color-primary
+            }
         }
         
         .pricing--basic {
-            $accent-color: var.$color-redish;
+            @include mixins.pricing-style(var.$color-redish);
+
+            .pricing--ammount {
+                color: var.$color-redish;
+            }
+
+            .btn {
+                background-color: var.$color-redish;
+            }
         }
         
-        .pricing--basic .pricing--ammount {
-            color: var.$color-redish;
-        }
         
-        .pricing--basic .btn {
-            background-color: var.$color-redish;
-        }
-        .pricing--premium .pricing--ammount {
-            color: var.$color-green;
-        
-        }
         .pricing--premium {
-            $accent-color: var.$color-green;
+            @include mixins.pricing-style(var.$color-green);
+
+            .pricing--ammount {
+                color: var.$color-green;
+            
+            }
         }
         .pricing--professional .pricing--ammount {
             color: var.$color-primary;
@@ -64,10 +67,7 @@ $accent-color: var.$color-primary;
         .pricing--premium .btn{
             background-color: var.$color-green;
         }
-        .pricing__box .btn {
-            padding: 16px 57px;
-            margin-top: 55px;
-        }
+        
         .pricing--professional .pricing__item {
             margin-top: 25px;
         }

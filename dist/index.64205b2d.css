@@ -208,6 +208,35 @@ h2 {
   display: flex;
 }
 
+.pricing .pricing__boxes .pricing__box {
+  width: 370px;
+  border: 1px solid #08a6e4;
+  border-radius: 18px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.pricing .pricing__boxes .pricing__box .btn, .contact .contact__form .contact__btn, .hero .hero__container .hero__content .btn {
+  color: #fff;
+  background-color: #08a6e4;
+  border-radius: 40px;
+  margin-top: 38px;
+  padding: 22px 157px;
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+  box-shadow: 5px 10px 14px #07ace629;
+}
+
+.contact .contact__questions, .contact .contact__form {
+  width: 50%;
+  flex-direction: column;
+  row-gap: 30px;
+  display: flex;
+}
+
 .benefits {
   background-color: #f7f7f7;
   padding: 100px 0;
@@ -465,17 +494,6 @@ h2 {
   line-height: 22px;
 }
 
-.hero .hero__container .hero__content .btn {
-  color: #fff;
-  background-color: #08a6e4;
-  border-radius: 40px;
-  margin-top: 38px;
-  padding: 22px 157px;
-  font-family: Open Sans, sans-serif;
-  font-size: 16px;
-  box-shadow: 5px 10px 14px #07ace629;
-}
-
 .hero .hero__container .img__hero {
   height: 519px;
 }
@@ -487,61 +505,48 @@ h2 {
   display: flex;
 }
 
-.contact h2 {
+.contact .contact__questions {
+  justify-content: flex-start;
+}
+
+.contact .contact__questions h2 {
   font-family: Raleway, sans-serif;
   font-size: 49px;
 }
 
-.contact__questions, .contact__form {
-  width: 50%;
-  flex-direction: column;
-  row-gap: 30px;
-  display: flex;
-}
-
-.contact__questions {
-  justify-content: flex-start;
-}
-
-.phone--number {
-  padding-left: 20px;
-}
-
-.contact__details a {
+.contact .contact__questions .contact__details a {
   color: #a5a5a5;
 }
 
-.form__checkbox {
-  align-items: flex-start;
-  column-gap: 10px;
-  display: flex;
+.contact .contact__questions .contact__details .phone--number {
+  padding-left: 20px;
 }
 
-.contact__btn {
-  text-align: center;
-  align-self: flex-end;
-  padding: 20px 97px;
-}
-
-.label__name {
+.contact .contact__form .label__name {
   color: #08a6e4;
   font-size: 11px;
   font-weight: 700;
 }
 
-#name, #email {
+.contact .contact__form #name, .contact .contact__form #email {
   border: none;
   border-bottom: 1px solid #a5a5a5;
 }
 
-.label__check {
+.contact .contact__form .form__checkbox {
+  align-items: flex-start;
+  column-gap: 10px;
+  display: flex;
+}
+
+.contact .contact__form .form__checkbox .label__check {
   color: #a5a5a5;
   margin-left: 20px;
   font-size: 12px;
   line-height: 17px;
 }
 
-#check {
+.contact .contact__form .form__checkbox #check {
   appearance: none;
   width: 24px;
   height: 24px;
@@ -552,13 +557,14 @@ h2 {
   position: relative;
 }
 
-#check:checked {
-  background-image: url("Checkmark.641b81d0.svg");
+.contact .contact__form .form__checkbox #check:checked {
+  background-image: url("Checkmark.c8518968.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: auto;
 }
 
-#check:after {
+.contact .contact__form .form__checkbox #check:after {
   content: "";
   width: 24px;
   height: 24px;
@@ -570,6 +576,12 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.contact .contact__form .contact__btn {
+  text-align: center;
+  align-self: flex-end;
+  padding: 20px 97px;
+}
+
 .pricing {
   flex-direction: column;
   justify-content: center;
@@ -579,91 +591,90 @@ h2 {
   display: flex;
 }
 
-.pricing__boxes {
+.pricing .pricing__boxes {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   display: flex;
 }
 
-.pricing__box {
-  width: 370px;
-  border: 1px solid #08a6e4;
-  border-radius: 18px;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.pricing__box .btn {
+.pricing .pricing__boxes .pricing__box .btn {
+  margin-top: 55px;
+  padding: 16px 57px;
   position: absolute;
   bottom: -24px;
 }
 
-.pricing--professional {
+.pricing .pricing__boxes .pricing--professional {
   width: 400px;
+  border: 1px solid #08a6e4;
   margin: 0 40px;
-  box-shadow: 5px 1px 27px #07ace629;
+  box-shadow: 5px 1px 27px #08a6e4;
 }
 
-.pricing--basic .pricing--ammount {
+.pricing .pricing__boxes .pricing--basic {
+  width: 400px;
+  border: 1px solid #fb3b64;
+  margin: 0 40px;
+}
+
+.pricing .pricing__boxes .pricing--basic .pricing--ammount {
   color: #fb3b64;
 }
 
-.pricing--basic .btn {
+.pricing .pricing__boxes .pricing--basic .btn {
   background-color: #fb3b64;
 }
 
-.pricing--premium .pricing--ammount {
+.pricing .pricing__boxes .pricing--premium {
+  width: 400px;
+  border: 1px solid #55dfb4;
+  margin: 0 40px;
+}
+
+.pricing .pricing__boxes .pricing--premium .pricing--ammount {
   color: #55dfb4;
 }
 
-.pricing--professional .pricing--ammount {
+.pricing .pricing__boxes .pricing--professional .pricing--ammount {
   color: #08a6e4;
 }
 
-.pricing--premium .btn {
+.pricing .pricing__boxes .pricing--premium .btn {
   background-color: #55dfb4;
 }
 
-.pricing__box .btn {
-  margin-top: 55px;
-  padding: 16px 57px;
-}
-
-.pricing--professional .pricing__item {
+.pricing .pricing__boxes .pricing--professional .pricing__item {
   margin-top: 25px;
 }
 
-.pricing__item {
+.pricing .pricing__boxes .pricing__item {
   margin-top: 20px;
 }
 
-.pricing__item:last-of-type {
+.pricing .pricing__boxes .pricing__item:last-of-type {
   margin-bottom: 80px;
 }
 
-.pricing__item:before {
+.pricing .pricing__boxes .pricing__item:before {
   content: url("Ckechmark-1.ea2223eb.svg");
   height: 11px;
   width: 11px;
   margin-right: 10px;
 }
 
-.not_include:before {
+.pricing .pricing__boxes .not_include:before {
   content: url("Close.5253c317.svg");
   height: 11px;
   width: 11px;
   margin-right: 10px;
 }
 
-.pricing__items {
+.pricing .pricing__boxes .pricing__items {
   text-align: center;
 }
 
-.pricing--title {
+.pricing .pricing__boxes .pricing--title {
   margin-top: 34px;
   margin-bottom: 14px;
   font-family: Raleway, sans-serif;
@@ -671,27 +682,27 @@ h2 {
   font-weight: 700;
 }
 
-.pricing--ammount1 {
+.pricing .pricing__boxes .pricing--ammount1 {
   margin-bottom: 83px;
 }
 
-.pricing--ammount {
+.pricing .pricing__boxes .pricing--ammount {
   margin-top: 25px;
   font-size: 46px;
   font-weight: 300;
 }
 
-.pricing--limit {
+.pricing .pricing__boxes .pricing--limit {
   margin-top: 25px;
   margin-bottom: 51px;
 }
 
-.pricing--limit--pro {
+.pricing .pricing__boxes .pricing--limit--pro {
   margin-top: 25px;
   margin-bottom: 61px;
 }
 
-.pricing--main--title {
+.pricing .pricing__boxes .pricing--main--title {
   font-family: Raleway, sans-serif;
   font-size: 36px;
 }
